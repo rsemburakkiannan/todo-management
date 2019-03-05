@@ -1,7 +1,7 @@
 package net.guides.springboot.todomanagement.service;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +13,6 @@ import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import static org.mockito.Mockito.mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -26,6 +25,7 @@ public class TodoServiceTest {
 	@Mock
 	TodoRepository todoRepository;
 	
+	@SuppressWarnings("unused")
 	private MockMvc mockMvc;
 	@Before
 	public void init() {		
