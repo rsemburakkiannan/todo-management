@@ -181,9 +181,31 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-jar-plugin</artifactId>
+	        <version>3.1.1</version>
+	        <executions>
+	          <execution>
+	            <goals>
+	              <goal>test-jar</goal>
+	            </goals>
+	          </execution>
+	        </executions>
+	      </plugin>
+		<plugin>
+			<artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+            	<execution>
+                	<phase>process-sources</phase>
+                     <goals>
+                         <goal>copy-dependencies</goal>
+                     </goals>
+                     <configuration>
+                         <outputDirectory>${targetdirectory}</outputDirectory>
+                     </configuration>
+            	</execution>
+            </executions>
+       </plugin>
+	</plugins>
 	</build>
 </project>
