@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 
-public class DevopsSelinium {
+public class DevopsSeliniumTest {
 
 	private static WebDriver driver;
 	private static WebDriverWait wait;	
